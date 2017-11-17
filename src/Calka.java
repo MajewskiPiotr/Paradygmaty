@@ -2,6 +2,7 @@
  * Created by Piotr Majewski on 2017-11-10.
  */
 //Całkowanie metodą prostokątów
+
 public class Calka {
     Integer iloscCalek;
     Double przedzial;

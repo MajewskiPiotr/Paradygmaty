@@ -19,18 +19,54 @@ public class Tools {
         return newString;
     }
 
+    public static void wypiszKomunikat(String s) {
+        System.out.println(s);
+    }
 
     public static String podajDane(String text) throws Exception {
-        System.out.println(text);
+        wypiszKomunikat(text);
         Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od użytkownika
         return weryfikacjaPoprawnosciDanych(odczyt.nextLine());
     }
 
     public static Double podajDaneZwrocDouble(String text) throws Exception {
-        System.out.println(text);
+        wypiszKomunikat(text);
         Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od użytkownika
         return Double.parseDouble(weryfikacjaPoprawnosciDanych(odczyt.nextLine()));
 
     }
 
+    public static Double podajDaneZwrocWiekszaOdZera(String text) throws Exception {
+        wypiszKomunikat(text);
+
+        Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od użytkownika
+        double war = Double.parseDouble(weryfikacjaPoprawnosciDanych(odczyt.nextLine()));
+        if (war > 0) {
+            return war;
+        } else System.out.println("liczba jest mniejsza od Zera lub jest zerem");
+        return null;
+
+    }
+
+    public static Integer IntegerPodajDaneZwrocWiekszaOdZera(String text) throws Exception {
+        wypiszKomunikat(text);
+
+        Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od użytkownika
+        Integer war = Integer.parseInt(weryfikacjaPoprawnosciDanych(odczyt.nextLine()));
+        if (war > 0) {
+            return war;
+        } else System.out.println("liczba jest mniejsza od Zera lub jest zerem");
+        return null;
+
+    }
+
+    public static Double podajDaneZwrocWiekszaLubRownaZero(String text) throws Exception {
+        wypiszKomunikat(text);
+        Scanner odczyt = new Scanner(System.in); //obiekt do odebrania danych od użytkownika
+        double war = Double.parseDouble(weryfikacjaPoprawnosciDanych(odczyt.nextLine()));
+        if (war >= 0) {
+            return war;
+        } else System.out.println("liczba jest mniejsza od Zera");
+        return null;
+    }
 }
