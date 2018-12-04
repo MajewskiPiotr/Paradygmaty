@@ -28,6 +28,7 @@ public class PierwiastekMetodaNewtonaRaphsona {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("dupa");
 
     }
 
